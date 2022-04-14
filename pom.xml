@@ -36,10 +36,25 @@
     <activemq-version>5.4.2</activemq-version>
     <jetty-version>7.2.2.v20101205</jetty-version>
     <xbean-spring-version>3.5</xbean-spring-version>
+      <sonar.host.url>http://35.88.197.178:9000/</sonar.host.url>
   </properties>
 
+    <distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://34.222.77.35:8081/repository/sample-snapshots/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>nexusRepo</id>
+		    <url>http://34.222.77.35:8081/repository/sample-releases/</url>
+		</repository>
+  	</distributionManagement>
+    
   <dependencies>
+     
     <dependency>
+     
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-web</artifactId>
       <version>${camel-version}</version>
